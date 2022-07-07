@@ -1,0 +1,45 @@
+<div class="container">
+    <br>
+    <h2><p>Modificar información del Usuario</p></h2>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre del usuario:</label>
+                    <input [(ngModel)]="usuario.nombre" type="text" class="form-control" name="nombre">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Apellido Paterno:</label>
+                    <input [(ngModel)]="usuario.a_paterno" type="text" class="form-control" name="a_paterno">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Apellido Materno:</label>
+                    <input [(ngModel)]="usuario.a_materno" type="text" class="form-control" name="a_materno">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Telefono</label>
+                    <input [(ngModel)]="usuario.telefono" type="number" class="form-control" name="telefono">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">RFC</label>
+                    <input [(ngModel)]="usuario.rfc" type="text" class="form-control" name="rfc">
+                </div>
+                <div class="col-lg-12" style="margin-bottom:20px;">
+                    <div style="float: left; padding-right: 10px;">
+                        <button routerLink="/inicio" class="btn btn-primary">Regresar</button>
+                    </div>
+                    <div style="float: left; padding-right: 10px; ">
+                        <button (click)="modificar()" class="btn btn-success  ">Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
+<br>

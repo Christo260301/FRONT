@@ -1,0 +1,61 @@
+<div class="container">
+
+    <br>
+    <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <button routerLink="/add" type="button" class="btn btn-success">Agregar Usuario</button>
+          </div>
+        </div>
+    </div>
+    <br>
+    <table class="table" id="excel-table" style="text-align:center;">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido Paterno</th>
+            <th scope="col">Apellido Materno</th>
+            <th scope="col">Telfono</th>
+            <th scope="col">RFC</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr *ngFor="let usuario of ListarUsuario; let i = index">
+            <th>{{usuario.id}}</th>
+            <th>{{usuario.nombre}}</th>
+            <th>{{usuario.a_paterno}}</th>
+            <th>{{usuario.a_materno}}</th>
+            <th>{{usuario.telefono}}</th>
+            <th>{{usuario.rfc}}</th>  
+            <th>
+                <button (click)="consultar(i)" type="button" class="btn btn-info">
+                    <i class="fa-solid fa-magnifying-glass"></i></button>
+            </th>  
+            <th>
+                <button (click)="modificar(i)" type="button" class="btn btn-warning">
+                    <i class="fa-solid fa-pen-fancy"></i></button>
+            </th>
+            <th>
+                <button (click)="eliminar(i)" type="button" class="btn btn-danger">
+                    <i class="fa-solid fa-trash-can"></i></button>
+            </th>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" style="margin-bottom:20px;">
+                <div style="float:right;">
+                    <button type="button"  class="btn btn-secondary" (click)="exportexcel()">Exportar a excel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br>
